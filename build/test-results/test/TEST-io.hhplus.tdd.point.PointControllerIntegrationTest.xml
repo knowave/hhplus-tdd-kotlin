@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PointController 통합 테스트" tests="14" skipped="0" failures="0" errors="0" timestamp="2025-10-21T12:09:44" hostname="taemin-ui-MacBookAir.local" time="0.446">
+<testsuite name="PointController 통합 테스트" tests="14" skipped="0" failures="0" errors="0" timestamp="2025-10-21T12:09:52" hostname="taemin-ui-MacBookAir.local" time="0.439">
   <properties/>
-  <testcase name="PATCH /point/{id}/use - 1000을 초과하는 금액으로 사용하면 400 에러가 발생한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.366"/>
-  <testcase name="통합 시나리오 - 충전, 사용, 조회가 연속적으로 올바르게 동작한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.05"/>
+  <testcase name="PATCH /point/{id}/use - 1000을 초과하는 금액으로 사용하면 400 에러가 발생한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.35"/>
+  <testcase name="통합 시나리오 - 충전, 사용, 조회가 연속적으로 올바르게 동작한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.053"/>
   <testcase name="동시성 테스트 - 동일 유저에 대한 동시 충전 요청이 올바르게 처리된다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.006"/>
-  <testcase name="동시성 테스트 - 동일 유저에 대한 동시 사용 요청이 올바르게 처리된다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
-  <testcase name="PATCH /point/{id}/charge - 0 이하의 금액으로 충전하면 400 에러가 발생한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.001"/>
-  <testcase name="GET /point/{id}/histories - 특정 유저의 포인트 내역을 조회한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.003"/>
+  <testcase name="동시성 테스트 - 동일 유저에 대한 동시 사용 요청이 올바르게 처리된다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.004"/>
+  <testcase name="PATCH /point/{id}/charge - 0 이하의 금액으로 충전하면 400 에러가 발생한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.003"/>
+  <testcase name="GET /point/{id}/histories - 특정 유저의 포인트 내역을 조회한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.004"/>
   <testcase name="PATCH /point/{id}/use - 포인트가 부족하면 400 에러가 발생한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
-  <testcase name="PATCH /point/{id}/charge - 여러 번 충전하면 포인트가 누적된다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
+  <testcase name="PATCH /point/{id}/charge - 여러 번 충전하면 포인트가 누적된다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.003"/>
   <testcase name="GET /point/{id} - 특정 유저의 포인트를 조회한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.001"/>
   <testcase name="GET /point/{id}/histories - 내역이 없는 유저는 빈 배열을 반환한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.001"/>
   <testcase name="PATCH /point/{id}/use - 100 단위가 아닌 금액으로 사용하면 400 에러가 발생한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
   <testcase name="PATCH /point/{id}/charge - 특정 유저의 포인트를 충전한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.001"/>
   <testcase name="PATCH /point/{id}/use - 특정 유저의 포인트를 사용한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.001"/>
-  <testcase name="GET /point/{id} - 존재하지 않는 유저의 포인트를 조회하면 0 포인트를 반환한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.001"/>
-  <system-out><![CDATA[21:09:43.577 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.hhplus.tdd.point.PointControllerIntegrationTest]: PointControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-21:09:43.618 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.hhplus.tdd.TddApplication for test class io.hhplus.tdd.point.PointControllerIntegrationTest
+  <testcase name="GET /point/{id} - 존재하지 않는 유저의 포인트를 조회하면 0 포인트를 반환한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
+  <system-out><![CDATA[21:09:52.175 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.hhplus.tdd.point.PointControllerIntegrationTest]: PointControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:09:52.216 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.hhplus.tdd.TddApplication for test class io.hhplus.tdd.point.PointControllerIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -27,12 +27,12 @@
 
  :: Spring Boot ::                (v3.5.6)
 
-2025-10-21T21:09:43.750+09:00  INFO 13324 --- [hhplus-tdd] [    Test worker] i.h.t.p.PointControllerIntegrationTest   : Starting PointControllerIntegrationTest using Java 17.0.16 with PID 13324 (started by taemin in /Users/taemin/dev/study/hhplus/hhplus-tdd-jvm)
-2025-10-21T21:09:43.750+09:00  INFO 13324 --- [hhplus-tdd] [    Test worker] i.h.t.p.PointControllerIntegrationTest   : No active profile set, falling back to 1 default profile: "default"
-2025-10-21T21:09:44.112+09:00  INFO 13324 --- [hhplus-tdd] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-10-21T21:09:44.112+09:00  INFO 13324 --- [hhplus-tdd] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-10-21T21:09:44.112+09:00  INFO 13324 --- [hhplus-tdd] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2025-10-21T21:09:44.124+09:00  INFO 13324 --- [hhplus-tdd] [    Test worker] i.h.t.p.PointControllerIntegrationTest   : Started PointControllerIntegrationTest in 0.464 seconds (process running for 0.808)
+2025-10-21T21:09:52.343+09:00  INFO 13410 --- [hhplus-tdd] [    Test worker] i.h.t.p.PointControllerIntegrationTest   : Starting PointControllerIntegrationTest using Java 17.0.16 with PID 13410 (started by taemin in /Users/taemin/dev/study/hhplus/hhplus-tdd-jvm)
+2025-10-21T21:09:52.344+09:00  INFO 13410 --- [hhplus-tdd] [    Test worker] i.h.t.p.PointControllerIntegrationTest   : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T21:09:52.690+09:00  INFO 13410 --- [hhplus-tdd] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-21T21:09:52.690+09:00  INFO 13410 --- [hhplus-tdd] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-21T21:09:52.691+09:00  INFO 13410 --- [hhplus-tdd] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-10-21T21:09:52.703+09:00  INFO 13410 --- [hhplus-tdd] [    Test worker] i.h.t.p.PointControllerIntegrationTest   : Started PointControllerIntegrationTest in 0.446 seconds (process running for 0.772)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

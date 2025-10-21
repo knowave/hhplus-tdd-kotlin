@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.439s</div>
+<div class="counter">0.433s</div>
 <p>duration</p>
 </div>
 </td>
@@ -87,13 +87,13 @@
 <tr>
 <td class="success">PATCH /point/{id}/charge - 0 이하의 금액으로 충전하면 400 에러가 발생한다</td>
 <td class="success">chargeUserPoint_invalidAmount()</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">PATCH /point/{id}/charge - 여러 번 충전하면 포인트가 누적된다</td>
 <td class="success">chargeUserPoint_multiple()</td>
-<td class="success">0.002s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -105,7 +105,7 @@
 <tr>
 <td class="success">동시성 테스트 - 동일 유저에 대한 동시 사용 요청이 올바르게 처리된다</td>
 <td class="success">concurrentUseRequests()</td>
-<td class="success">0.002s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -117,7 +117,7 @@
 <tr>
 <td class="success">GET /point/{id}/histories - 특정 유저의 포인트 내역을 조회한다</td>
 <td class="success">getUserPointHistories()</td>
-<td class="success">0.003s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -129,13 +129,13 @@
 <tr>
 <td class="success">GET /point/{id} - 존재하지 않는 유저의 포인트를 조회하면 0 포인트를 반환한다</td>
 <td class="success">getUserPoint_nonExistentUser()</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">통합 시나리오 - 충전, 사용, 조회가 연속적으로 올바르게 동작한다</td>
 <td class="success">integratedScenario()</td>
-<td class="success">0.050s</td>
+<td class="success">0.053s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -147,7 +147,7 @@
 <tr>
 <td class="success">PATCH /point/{id}/use - 1000을 초과하는 금액으로 사용하면 400 에러가 발생한다</td>
 <td class="success">useUserPoint_excessiveAmount()</td>
-<td class="success">0.366s</td>
+<td class="success">0.350s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -167,8 +167,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>21:09:43.577 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.hhplus.tdd.point.PointControllerIntegrationTest]: PointControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-21:09:43.618 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.hhplus.tdd.TddApplication for test class io.hhplus.tdd.point.PointControllerIntegrationTest
+<pre>21:09:52.175 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.hhplus.tdd.point.PointControllerIntegrationTest]: PointControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:09:52.216 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.hhplus.tdd.TddApplication for test class io.hhplus.tdd.point.PointControllerIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -179,12 +179,12 @@
 
  :: Spring Boot ::                (v3.5.6)
 
-2025-10-21T21:09:43.750+09:00  INFO 13324 --- [hhplus-tdd] [    Test worker] i.h.t.p.PointControllerIntegrationTest   : Starting PointControllerIntegrationTest using Java 17.0.16 with PID 13324 (started by taemin in /Users/taemin/dev/study/hhplus/hhplus-tdd-jvm)
-2025-10-21T21:09:43.750+09:00  INFO 13324 --- [hhplus-tdd] [    Test worker] i.h.t.p.PointControllerIntegrationTest   : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-10-21T21:09:44.112+09:00  INFO 13324 --- [hhplus-tdd] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-10-21T21:09:44.112+09:00  INFO 13324 --- [hhplus-tdd] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-10-21T21:09:44.112+09:00  INFO 13324 --- [hhplus-tdd] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2025-10-21T21:09:44.124+09:00  INFO 13324 --- [hhplus-tdd] [    Test worker] i.h.t.p.PointControllerIntegrationTest   : Started PointControllerIntegrationTest in 0.464 seconds (process running for 0.808)
+2025-10-21T21:09:52.343+09:00  INFO 13410 --- [hhplus-tdd] [    Test worker] i.h.t.p.PointControllerIntegrationTest   : Starting PointControllerIntegrationTest using Java 17.0.16 with PID 13410 (started by taemin in /Users/taemin/dev/study/hhplus/hhplus-tdd-jvm)
+2025-10-21T21:09:52.344+09:00  INFO 13410 --- [hhplus-tdd] [    Test worker] i.h.t.p.PointControllerIntegrationTest   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-10-21T21:09:52.690+09:00  INFO 13410 --- [hhplus-tdd] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-21T21:09:52.690+09:00  INFO 13410 --- [hhplus-tdd] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-21T21:09:52.691+09:00  INFO 13410 --- [hhplus-tdd] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-10-21T21:09:52.703+09:00  INFO 13410 --- [hhplus-tdd] [    Test worker] i.h.t.p.PointControllerIntegrationTest   : Started PointControllerIntegrationTest in 0.446 seconds (process running for 0.772)
 </pre>
 </span>
 </div>
@@ -196,7 +196,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.4</a> at 2025. 10. 21. 오후 9:09:44</p>
+<a href="http://www.gradle.org">Gradle 8.4</a> at 2025. 10. 21. 오후 9:09:53</p>
 </div>
 </div>
 </body>
