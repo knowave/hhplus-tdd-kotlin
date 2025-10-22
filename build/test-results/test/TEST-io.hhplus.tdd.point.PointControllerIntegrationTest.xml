@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.hhplus.tdd.point.PointControllerIntegrationTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2025-10-22T12:08:58.536Z" hostname="taemin-ui-MacBookAir.local" time="0.224">
+<testsuite name="io.hhplus.tdd.point.PointControllerIntegrationTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2025-10-22T12:22:27.383Z" hostname="taemin-ui-MacBookAir.local" time="0.229">
   <properties/>
-  <testcase name="특정 유저의 포인트를 조회한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.063"/>
+  <testcase name="특정 유저의 포인트를 조회한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.059"/>
   <testcase name="존재하지 않는 유저의 포인트를 조회하면 0 포인트를 반환한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
-  <testcase name="특정 유저의 포인트 내역을 조회한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.043"/>
+  <testcase name="특정 유저의 포인트 내역을 조회한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.048"/>
   <testcase name="내역이 없는 유저는 빈 배열을 반환한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
-  <testcase name="특정 유저의 포인트를 충전한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.008"/>
+  <testcase name="특정 유저의 포인트를 충전한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.01"/>
   <testcase name="여러 번 충전하면 포인트가 누적된다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
-  <testcase name="0 이하의 금액으로 충전하면 400 에러가 발생한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.023"/>
-  <testcase name="특정 유저의 포인트를 사용한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.003"/>
-  <testcase name="포인트가 부족하면 400 에러가 발생한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
+  <testcase name="0 이하의 금액으로 충전하면 400 에러가 발생한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.021"/>
+  <testcase name="특정 유저의 포인트를 사용한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
+  <testcase name="포인트가 부족하면 400 에러가 발생한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.001"/>
   <testcase name="100 단위가 아닌 금액으로 사용하면 400 에러가 발생한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
   <testcase name="1000을 초과하는 금액으로 사용하면 400 에러가 발생한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
   <testcase name="동일 유저에 대한 동시 충전 요청이 올바르게 처리된다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.005"/>
   <testcase name="동일 유저에 대한 동시 사용 요청이 올바르게 처리된다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.002"/>
   <testcase name="충전, 사용, 조회가 연속적으로 올바르게 동작한다" classname="io.hhplus.tdd.point.PointControllerIntegrationTest" time="0.004"/>
-  <system-out><![CDATA[21:08:57.640 [Test worker @coroutine#2] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.hhplus.tdd.point.PointControllerIntegrationTest]: PointControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-21:08:57.708 [Test worker @coroutine#2] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.hhplus.tdd.TddApplication for test class io.hhplus.tdd.point.PointControllerIntegrationTest
+  <system-out><![CDATA[21:22:26.510 [Test worker @coroutine#2] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.hhplus.tdd.point.PointControllerIntegrationTest]: PointControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:22:26.576 [Test worker @coroutine#2] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.hhplus.tdd.TddApplication for test class io.hhplus.tdd.point.PointControllerIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -27,12 +27,12 @@
 
  :: Spring Boot ::                (v3.5.6)
 
-2025-10-22T21:08:57.892+09:00  INFO 33334 --- [hhplus-tdd] [er @coroutine#2] i.h.t.p.PointControllerIntegrationTest   : Starting PointControllerIntegrationTest using Java 17.0.16 with PID 33334 (started by taemin in /Users/taemin/dev/study/hhplus/hhplus-tdd-kotlin)
-2025-10-22T21:08:57.893+09:00  INFO 33334 --- [hhplus-tdd] [er @coroutine#2] i.h.t.p.PointControllerIntegrationTest   : No active profile set, falling back to 1 default profile: "default"
-2025-10-22T21:08:58.239+09:00  INFO 33334 --- [hhplus-tdd] [er @coroutine#2] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-10-22T21:08:58.239+09:00  INFO 33334 --- [hhplus-tdd] [er @coroutine#2] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-10-22T21:08:58.240+09:00  INFO 33334 --- [hhplus-tdd] [er @coroutine#2] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2025-10-22T21:08:58.252+09:00  INFO 33334 --- [hhplus-tdd] [er @coroutine#2] i.h.t.p.PointControllerIntegrationTest   : Started PointControllerIntegrationTest in 0.503 seconds (process running for 2.264)
+2025-10-22T21:22:26.718+09:00  INFO 35876 --- [hhplus-tdd] [er @coroutine#2] i.h.t.p.PointControllerIntegrationTest   : Starting PointControllerIntegrationTest using Java 17.0.16 with PID 35876 (started by taemin in /Users/taemin/dev/study/hhplus/hhplus-tdd-kotlin)
+2025-10-22T21:22:26.719+09:00  INFO 35876 --- [hhplus-tdd] [er @coroutine#2] i.h.t.p.PointControllerIntegrationTest   : No active profile set, falling back to 1 default profile: "default"
+2025-10-22T21:22:27.089+09:00  INFO 35876 --- [hhplus-tdd] [er @coroutine#2] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-22T21:22:27.089+09:00  INFO 35876 --- [hhplus-tdd] [er @coroutine#2] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-22T21:22:27.090+09:00  INFO 35876 --- [hhplus-tdd] [er @coroutine#2] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-10-22T21:22:27.102+09:00  INFO 35876 --- [hhplus-tdd] [er @coroutine#2] i.h.t.p.PointControllerIntegrationTest   : Started PointControllerIntegrationTest in 0.482 seconds (process running for 2.102)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

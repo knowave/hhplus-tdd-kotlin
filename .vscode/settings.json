@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["fasterxml", "hhplus", "kotest", "springframework"]
+  "cSpell.words": [
+    "databind",
+    "fasterxml",
+    "hhplus",
+    "kotest",
+    "mockk",
+    "springframework"
+  ]
 }

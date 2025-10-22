@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.163s</div>
+<div class="counter">0.162s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">0 이하의 금액으로 충전하면 400 에러가 발생한다</td>
-<td class="success">0.023s</td>
+<td class="success">0.021s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -124,27 +124,27 @@
 </tr>
 <tr>
 <td class="success">특정 유저의 포인트 내역을 조회한다</td>
-<td class="success">0.043s</td>
+<td class="success">0.048s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">특정 유저의 포인트를 사용한다</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">특정 유저의 포인트를 조회한다</td>
-<td class="success">0.063s</td>
+<td class="success">0.059s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">특정 유저의 포인트를 충전한다</td>
-<td class="success">0.008s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">포인트가 부족하면 400 에러가 발생한다</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -152,8 +152,8 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre id="class-stdout">21:08:57.640 [Test worker @coroutine#2] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.hhplus.tdd.point.PointControllerIntegrationTest]: PointControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-21:08:57.708 [Test worker @coroutine#2] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.hhplus.tdd.TddApplication for test class io.hhplus.tdd.point.PointControllerIntegrationTest
+<pre id="class-stdout">21:22:26.510 [Test worker @coroutine#2] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.hhplus.tdd.point.PointControllerIntegrationTest]: PointControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:22:26.576 [Test worker @coroutine#2] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.hhplus.tdd.TddApplication for test class io.hhplus.tdd.point.PointControllerIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -164,12 +164,12 @@
 
  :: Spring Boot ::                (v3.5.6)
 
-2025-10-22T21:08:57.892+09:00  INFO 33334 --- [hhplus-tdd] [er @coroutine#2] i.h.t.p.PointControllerIntegrationTest   : Starting PointControllerIntegrationTest using Java 17.0.16 with PID 33334 (started by taemin in /Users/taemin/dev/study/hhplus/hhplus-tdd-kotlin)
-2025-10-22T21:08:57.893+09:00  INFO 33334 --- [hhplus-tdd] [er @coroutine#2] i.h.t.p.PointControllerIntegrationTest   : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-10-22T21:08:58.239+09:00  INFO 33334 --- [hhplus-tdd] [er @coroutine#2] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-10-22T21:08:58.239+09:00  INFO 33334 --- [hhplus-tdd] [er @coroutine#2] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-10-22T21:08:58.240+09:00  INFO 33334 --- [hhplus-tdd] [er @coroutine#2] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2025-10-22T21:08:58.252+09:00  INFO 33334 --- [hhplus-tdd] [er @coroutine#2] i.h.t.p.PointControllerIntegrationTest   : Started PointControllerIntegrationTest in 0.503 seconds (process running for 2.264)
+2025-10-22T21:22:26.718+09:00  INFO 35876 --- [hhplus-tdd] [er @coroutine#2] i.h.t.p.PointControllerIntegrationTest   : Starting PointControllerIntegrationTest using Java 17.0.16 with PID 35876 (started by taemin in /Users/taemin/dev/study/hhplus/hhplus-tdd-kotlin)
+2025-10-22T21:22:26.719+09:00  INFO 35876 --- [hhplus-tdd] [er @coroutine#2] i.h.t.p.PointControllerIntegrationTest   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-10-22T21:22:27.089+09:00  INFO 35876 --- [hhplus-tdd] [er @coroutine#2] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-22T21:22:27.089+09:00  INFO 35876 --- [hhplus-tdd] [er @coroutine#2] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-22T21:22:27.090+09:00  INFO 35876 --- [hhplus-tdd] [er @coroutine#2] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-10-22T21:22:27.102+09:00  INFO 35876 --- [hhplus-tdd] [er @coroutine#2] i.h.t.p.PointControllerIntegrationTest   : Started PointControllerIntegrationTest in 0.482 seconds (process running for 2.102)
 </pre>
 <button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="class-stdout">Copy</button>
 </span>
@@ -182,7 +182,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 9.1.0</a> at 2025. 10. 22. 오후 9:08:58</p>
+<a href="https://www.gradle.org">Gradle 9.1.0</a> at 2025. 10. 22. 오후 9:22:27</p>
 </div>
 </div>
 </body>
