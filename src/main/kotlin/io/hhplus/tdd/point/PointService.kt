@@ -21,14 +21,12 @@ class PointService(
         }
 
         fun chargeUserPoint(id: Long, amount: Long): UserPoint {
-            require(amount > 0) { "충전 금액은 양수여야 합니다." }
-
             val lock = userLock.computeIfAbsent(id) { ReentrantLock() }
             lock.lock()
 
             try {
                 val currentPoint = userPointTable.selectById(id)
-                val newPoint = currentPoint.point + amount
+                val newPoint = currentPoint.charge(amount)
                 return userPointTable.insertOrUpdate(id, newPoint)
             } catch(e: Exception) {
                 throw e
@@ -38,21 +36,16 @@ class PointService(
         }
 
         fun useUserPoint(userId: Long, amount: Long): UserPoint {
-            require(amount > 0) { "사용 금액은 양수여야 합니다." }
-            require(amount % 100 == 0L) { "포인트 사용은 100 단위로만 가능합니다." }
-            require(amount <= 1000) { "포인트 출금은 1000 이하로 할 수 없습니다." }
-            
             val lock = userLock.computeIfAbsent(userId) { ReentrantLock() }
-            
+
             lock.lock()
             try {
                 val currentPoint = userPointTable.selectById(userId)
-                require(currentPoint.point >= amount) { "포인트가 부족합니다." }
-                
-                val newPoint = currentPoint.point - amount
+                val newPoint = currentPoint.deduct(amount)
+
                 val result = userPointTable.insertOrUpdate(userId, newPoint)
                 pointHistoryTable.insert(userId, amount, TransactionType.USE, System.currentTimeMillis())
-                
+
                 return result
             } finally {
                 lock.unlock()

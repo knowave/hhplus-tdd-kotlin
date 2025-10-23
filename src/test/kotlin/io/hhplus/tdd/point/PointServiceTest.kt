@@ -63,7 +63,7 @@ class PointServiceTest : DescribeSpec({
     }
 
     describe("포인트 충전") {
-        it("포인트를 충전한다") {
+        it("포인트를 충전하고 DB를 업데이트한다") {
             // given
             val userId = 1L
             val chargeAmount = 1000L
@@ -82,34 +82,10 @@ class PointServiceTest : DescribeSpec({
             verify(exactly = 1) { userPointTable.selectById(userId) }
             verify(exactly = 1) { userPointTable.insertOrUpdate(userId, 1000L) }
         }
-
-        it("충전 금액이 0 이하인 경우 예외가 발생한다") {
-            // given
-            val userId = 1L
-            val invalidAmount = -100L
-
-            // when & then
-            val exception = shouldThrow<IllegalArgumentException> {
-                pointService.chargeUserPoint(userId, invalidAmount)
-            }
-            exception.message shouldBe "충전 금액은 양수여야 합니다."
-        }
-
-        it("충전 금액이 0인 경우 예외가 발생한다") {
-            // given
-            val userId = 1L
-            val invalidAmount = 0L
-
-            // when & then
-            val exception = shouldThrow<IllegalArgumentException> {
-                pointService.chargeUserPoint(userId, invalidAmount)
-            }
-            exception.message shouldBe "충전 금액은 양수여야 합니다."
-        }
     }
 
     describe("포인트 사용") {
-        it("포인트를 사용한다") {
+        it("포인트를 사용하고 DB를 업데이트하며 히스토리를 기록한다") {
             // given
             val userId = 1L
             val useAmount = 500L
@@ -131,58 +107,6 @@ class PointServiceTest : DescribeSpec({
             verify(exactly = 1) { userPointTable.selectById(userId) }
             verify(exactly = 1) { userPointTable.insertOrUpdate(userId, 500L) }
             verify(exactly = 1) { pointHistoryTable.insert(userId, useAmount, TransactionType.USE, any()) }
-        }
-
-        it("사용 금액이 0 이하인 경우 예외가 발생한다") {
-            // given
-            val userId = 1L
-            val invalidAmount = -100L
-
-            // when & then
-            val exception = shouldThrow<IllegalArgumentException> {
-                pointService.useUserPoint(userId, invalidAmount)
-            }
-            exception.message shouldBe "사용 금액은 양수여야 합니다."
-        }
-
-        it("포인트가 부족한 경우 예외가 발생한다") {
-            // given
-            val userId = 1L
-            val useAmount = 600L
-            val currentPoint = UserPoint(id = userId, point = 500L, updateMillis = System.currentTimeMillis())
-
-            every { userPointTable.selectById(userId) } returns currentPoint
-
-            // when & then
-            val exception = shouldThrow<IllegalArgumentException> {
-                pointService.useUserPoint(userId, useAmount)
-            }
-            exception.message shouldBe "포인트가 부족합니다."
-            verify(exactly = 1) { userPointTable.selectById(userId) }
-        }
-
-        it("포인트 사용이 100 단위가 아닌 경우 예외가 발생한다") {
-            // given
-            val userId = 1L
-            val invalidAmount = 550L
-
-            // when & then
-            val exception = shouldThrow<IllegalArgumentException> {
-                pointService.useUserPoint(userId, invalidAmount)
-            }
-            exception.message shouldBe "포인트 사용은 100 단위로만 가능합니다."
-        }
-
-        it("포인트 사용이 1000을 초과하는 경우 예외가 발생한다") {
-            // given
-            val userId = 1L
-            val invalidAmount = 1100L
-
-            // when & then
-            val exception = shouldThrow<IllegalArgumentException> {
-                pointService.useUserPoint(userId, invalidAmount)
-            }
-            exception.message shouldBe "포인트 출금은 1000 이하로 할 수 없습니다."
         }
     }
 })

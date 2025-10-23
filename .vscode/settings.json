@@ -1,10 +1,4 @@
 {
-  "cSpell.words": [
-    "databind",
-    "fasterxml",
-    "hhplus",
-    "kotest",
-    "mockk",
-    "springframework"
-  ]
+    "cSpell.words": ["databind", "fasterxml", "hhplus", "kotest", "mockk", "springframework"],
+    "java.compile.nullAnalysis.mode": "automatic"
 }
